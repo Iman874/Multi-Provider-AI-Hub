@@ -1,0 +1,15 @@
+fastapi>=0.115
+uvicorn[standard]>=0.34
+pydantic>=2.0
+pydantic-settings>=2.0
+httpx>=0.28
+google-genai>=1.0
+sse-starlette>=2.0
+python-dotenv>=1.0
+loguru>=0.7
+
+# --- Testing ---
+pytest>=8.0
+pytest-asyncio>=0.24
+pytest-mock>=3.14
+respx>=0.22
