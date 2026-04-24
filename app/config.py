@@ -26,7 +26,7 @@ class Settings(BaseSettings):
 
     # --- App ---
     APP_NAME: str = "AI Generative Core"
-    APP_VERSION: str = "0.2.7"
+    APP_VERSION: str = "0.2.8"
     DEBUG: bool = False
 
     # --- Ollama (Local LLM) ---

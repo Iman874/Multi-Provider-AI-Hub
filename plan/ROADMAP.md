@@ -4,7 +4,7 @@
 > **Format**: Modular Versioning (beta0.X.Y)  
 > **Created**: 2026-04-22  
 > **Last Updated**: 2026-04-24  
-> **Current Version**: 0.2.7
+> **Current Version**: 0.2.8
 
 ---
 
@@ -80,6 +80,7 @@ beta0.1.1   beta0.1.2   beta0.1.3   beta0.1.4   beta0.1.5   beta0.1.6   beta0.1.
 | **beta0.2.5** | Batch Processing | Multiple prompts in one request, concurrent execution | 0.2.4 | ✅ Done |
 | **beta0.2.6** | NVIDIA NIM Provider | Explore & integrate NVIDIA NIM API (OpenAI-compatible) | 0.2.5 | ✅ Done |
 | **beta0.2.7** | Smart Routing & Fallback | Auto provider mode, Graceful degradation | 0.2.6 | ✅ Done |
+| **beta0.2.8** | Reasoning Capability | Reasoning discovery, thinking output support | 0.2.7 | ✅ Done |
 
 **Dependency Chain (Phase 2):**
 ```
@@ -87,25 +88,26 @@ beta0.1.1   beta0.1.2   beta0.1.3   beta0.1.4   beta0.1.5   beta0.1.6   beta0.1.
                │
                ├──▶ 0.2.3 (parallel with 0.2.2)
                │
-               └──▶ 0.2.4 ──▶ 0.2.5 ──▶ 0.2.6 ──▶ 0.2.7
+               └──▶ 0.2.4 ──▶ 0.2.5 ──▶ 0.2.6 ──▶ 0.2.7 ──▶ 0.2.8
 ```
 
 ---
 
 ## 🎯 Capability Progression — Phase 2
 
-| Capability | 0.2.1 | 0.2.2 | 0.2.3 | 0.2.4 | 0.2.5 | 0.2.6 | 0.2.7 |
-|---|---|---|---|---|---|---|---|
-| Gateway auth | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Rate limiting | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Multi-turn chat | — | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Provider probing | — | — | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Response caching | — | — | — | ✅ | ✅ | ✅ | ✅ |
-| Batch generation | — | — | — | — | ✅ | ✅ | ✅ |
-| NVIDIA provider  | — | — | — | — | — | ✅ | ✅ |
-| Dynamic models   | — | — | — | — | — | ✅ | ✅ |
-| Smart routing    | — | — | — | — | — | — | ✅ |
-| Auto Fallback    | — | — | — | — | — | — | ✅ |
+| Capability | 0.2.1 | 0.2.2 | 0.2.3 | 0.2.4 | 0.2.5 | 0.2.6 | 0.2.7 | 0.2.8 |
+|---|---|---|---|---|---|---|---|---|
+| Gateway auth | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Rate limiting | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Multi-turn chat | — | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Provider probing | — | — | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Response caching | — | — | — | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Batch generation | — | — | — | — | ✅ | ✅ | ✅ | ✅ |
+| NVIDIA provider  | — | — | — | — | — | ✅ | ✅ | ✅ |
+| Dynamic models   | — | — | — | — | — | ✅ | ✅ | ✅ |
+| Smart routing    | — | — | — | — | — | — | ✅ | ✅ |
+| Auto Fallback    | — | — | — | — | — | — | ✅ | ✅ |
+| Reasoning detect | — | — | — | — | — | — | — | ✅ |
 
 ---
 
@@ -131,6 +133,9 @@ plan/
     ├── task4-fallback-loop-stream-embed.md
     ├── task5-unit-tests.md
     └── task6-documentation.md
+
+├── beta0.2.8-reasoning-capability/              # ✅ Done
+│   └── plan-design-reasoning-capability-beta0.2.8.md
 ```
 
 ---
@@ -162,6 +167,7 @@ plan/
 12. **Batch Processing (0.2.5)** — Throughput untuk SaaS workloads (bulk generation & embedding)
 13. **NVIDIA NIM Provider (0.2.6)** — Ekspansi provider ke cloud GPU-powered models (OpenAI-compatible)
 14. **Smart Routing (0.2.7)** — Menambahkan reliabilitas maksimal dengan graceful degradation otomatis
+15. **Reasoning Capability (0.2.8)** — Identifikasi model reasoning dan dukung output pemikiran.
 
 ### Prinsip
 

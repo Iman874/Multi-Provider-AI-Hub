@@ -1,6 +1,6 @@
 # 📘 API Documentation — AI Generative Core
 
-> **Version**: beta0.2.5  
+> **Version**: beta0.2.8  
 > **Base URL**: `http://localhost:8000`  
 > **API Prefix**: `/api/v1`  
 > **Swagger UI**: `http://localhost:8000/docs`
@@ -126,7 +126,7 @@ curl http://localhost:8000/health
 ```json
 {
   "status": "ok",
-  "version": "0.2.5",
+  "version": "0.2.8",
   "app_name": "AI Generative Core"
 }
 ```
@@ -205,6 +205,7 @@ curl "http://localhost:8000/api/v1/models?include_unavailable=true"
     "supports_text": true,
     "supports_image": false,
     "supports_embedding": false,
+    "supports_reasoning": false,
     "available": true
   },
   {
@@ -213,6 +214,7 @@ curl "http://localhost:8000/api/v1/models?include_unavailable=true"
     "supports_text": false,
     "supports_image": false,
     "supports_embedding": true,
+    "supports_reasoning": false,
     "available": true
   },
   {
@@ -221,6 +223,7 @@ curl "http://localhost:8000/api/v1/models?include_unavailable=true"
     "supports_text": true,
     "supports_image": true,
     "supports_embedding": false,
+    "supports_reasoning": false,
     "available": true
   },
   {
@@ -229,6 +232,7 @@ curl "http://localhost:8000/api/v1/models?include_unavailable=true"
     "supports_text": false,
     "supports_image": false,
     "supports_embedding": true,
+    "supports_reasoning": false,
     "available": true
   }
 ]
@@ -236,14 +240,15 @@ curl "http://localhost:8000/api/v1/models?include_unavailable=true"
 
 ### Default Registered Models
 
-| Model | Provider | Text | Image | Embedding |
-|-------|----------|------|-------|-----------|
-| `gemma4:e2b` | ollama | ✅ | ❌ | ❌ |
-| `qwen3-embedding:0.6b` | ollama | ❌ | ❌ | ✅ |
-| `gemini-2.5-pro` | gemini | ✅ | ✅ | ❌ |
-| `gemini-3.0-pro-preview` | gemini | ✅ | ✅ | ❌ |
-| `gemini-3.1-flash-preview` | gemini | ✅ | ✅ | ❌ |
-| `text-embedding-004` | gemini | ❌ | ❌ | ✅ |
+| Model | Provider | Text | Image | Embedding | Reasoning |
+|-------|----------|------|-------|-----------|-----------|
+| `gemma4:e2b` | ollama | ✅ | ❌ | ❌ | ❌ |
+| `qwen3-embedding:0.6b` | ollama | ❌ | ❌ | ✅ | ❌ |
+| `gemini-2.5-pro` | gemini | ✅ | ✅ | ❌ | ❌ |
+| `gemini-3.0-pro-preview` | gemini | ✅ | ✅ | ❌ | ✅ |
+| `gemini-3.1-flash-preview` | gemini | ✅ | ✅ | ❌ | ❌ |
+| `text-embedding-004` | gemini | ❌ | ❌ | ✅ | ❌ |
+| `deepseek-ai/deepseek-v3.2` | nvidia | ✅ | ❌ | ❌ | ✅ |
 
 ---
 
@@ -842,4 +847,4 @@ All settings are configured via `.env` file or environment variables.
 
 ---
 
-> **Auto-generated for AI Generative Core beta0.2.5** — For interactive exploration, visit the Swagger UI at `http://localhost:8000/docs`.
+> **Auto-generated for AI Generative Core beta0.2.8** — For interactive exploration, visit the Swagger UI at `http://localhost:8000/docs`.

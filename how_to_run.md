@@ -1,4 +1,4 @@
-# How to Run — AI Generative Core (v0.2.6)
+# How to Run — AI Generative Core (v0.2.8)
 
 Backend API gateway yang menyatukan 3 AI provider (Ollama, Gemini, NVIDIA NIM) dalam satu REST API.
 
@@ -457,25 +457,25 @@ curl -X DELETE http://localhost:8000/api/v1/cache
 
 ### Default Models (Registered)
 
-| Provider | Model | Tipe | Bisa Generate | Bisa Stream | Bisa Embed |
-|----------|-------|------|:---:|:---:|:---:|
-| `ollama` | `gemma4:e2b` | LLM | ✅ | ✅ | ❌ |
-| `ollama` | `qwen3-embedding:0.6b` | Embedding | ❌ | ❌ | ✅ |
-| `gemini` | `gemini-2.5-pro` | LLM + Vision | ✅ | ❌ | ❌ |
-| `gemini` | `gemini-3.0-pro-preview` | LLM + Vision | ✅ | ❌ | ❌ |
-| `gemini` | `gemini-3.1-flash-preview` | LLM + Vision | ✅ | ❌ | ❌ |
-| `gemini` | `text-embedding-004` | Embedding | ❌ | ❌ | ✅ |
-| `nvidia` | `meta/llama-3.3-70b-instruct` | LLM ⭐ | ✅ | ✅ | ❌ |
-| `nvidia` | `deepseek-ai/deepseek-v3.2` | Reasoning ⭐ | ✅ | ✅ | ❌ |
-| `nvidia` | `nvidia/nv-embedqa-e5-v5` | Embedding ⭐ | ❌ | ❌ | ✅ |
-| `nvidia` | `nvidia/llama-3.1-nemotron-70b-instruct` | LLM | ✅ | ✅ | ❌ |
-| `nvidia` | `meta/llama-3.1-405b-instruct` | LLM (405B) | ✅ | ✅ | ❌ |
-| `nvidia` | `mistralai/mistral-large-2-instruct` | LLM | ✅ | ✅ | ❌ |
-| `nvidia` | `google/gemma-2-27b-it` | LLM | ✅ | ✅ | ❌ |
-| `nvidia` | `microsoft/phi-3.5-mini-instruct` | LLM (small) | ✅ | ✅ | ❌ |
-| `nvidia` | `bigcode/starcoder2-15b` | Coding | ✅ | ✅ | ❌ |
-| `nvidia` | `baai/bge-m3` | Embedding | ❌ | ❌ | ✅ |
-| `nvidia` | `snowflake/arctic-embed-l` | Embedding | ❌ | ❌ | ✅ |
+| Provider | Model | Tipe | Bisa Generate | Bisa Stream | Bisa Embed | Bisa Reasoning |
+|----------|-------|------|:---:|:---:|:---:|:---:|
+| `ollama` | `gemma4:e2b` | LLM | ✅ | ✅ | ❌ | ❌ |
+| `ollama` | `qwen3-embedding:0.6b` | Embedding | ❌ | ❌ | ✅ | ❌ |
+| `gemini` | `gemini-2.5-pro` | LLM + Vision | ✅ | ❌ | ❌ | ❌ |
+| `gemini` | `gemini-3.0-pro-preview` | LLM + Vision | ✅ | ❌ | ❌ | ✅ |
+| `gemini` | `gemini-3.1-flash-preview` | LLM + Vision | ✅ | ❌ | ❌ | ❌ |
+| `gemini` | `text-embedding-004` | Embedding | ❌ | ❌ | ✅ | ❌ |
+| `nvidia` | `meta/llama-3.3-70b-instruct` | LLM ⭐ | ✅ | ✅ | ❌ | ❌ |
+| `nvidia` | `deepseek-ai/deepseek-v3.2` | Reasoning ⭐ | ✅ | ✅ | ❌ | ✅ |
+| `nvidia` | `nvidia/nv-embedqa-e5-v5` | Embedding ⭐ | ❌ | ❌ | ✅ | ❌ |
+| `nvidia` | `nvidia/llama-3.1-nemotron-70b-instruct` | LLM | ✅ | ✅ | ❌ | ❌ |
+| `nvidia` | `meta/llama-3.1-405b-instruct` | LLM (405B) | ✅ | ✅ | ❌ | ❌ |
+| `nvidia` | `mistralai/mistral-large-2-instruct` | LLM | ✅ | ✅ | ❌ | ❌ |
+| `nvidia` | `google/gemma-2-27b-it` | LLM | ✅ | ✅ | ❌ | ❌ |
+| `nvidia` | `microsoft/phi-3.5-mini-instruct` | LLM (small) | ✅ | ✅ | ❌ | ❌ |
+| `nvidia` | `bigcode/starcoder2-15b` | Coding | ✅ | ✅ | ❌ | ❌ |
+| `nvidia` | `baai/bge-m3` | Embedding | ❌ | ❌ | ✅ | ❌ |
+| `nvidia` | `snowflake/arctic-embed-l` | Embedding | ❌ | ❌ | ✅ | ❌ |
 
 > ⭐ = Top 3 default (tampil saat `limit=3`). Gunakan `limit=0` untuk melihat semua.
 
