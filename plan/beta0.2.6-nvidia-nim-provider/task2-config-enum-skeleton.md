@@ -4,7 +4,7 @@
 Tambah konfigurasi NVIDIA, update ProviderEnum, dan buat skeleton NvidiaProvider
 
 ## 2. Deskripsi
-Menyiapkan fondasi infrastruktur untuk NVIDIA NIM provider: environment config (`NVIDIA_API_KEY`, `NVIDIA_BASE_URL`, `NVIDIA_TIMEOUT`), menambahkan `"nvidia"` ke ProviderEnum agar request schema menerima provider baru, dan membuat file `nvidia.py` yang mengimport `BaseProvider`.
+Menyiapkan fondasi infrastruktur untuk NVIDIA NIM provider: environment config (`NVIDIA_API_KEY`, `NVIDIA_BASE_URL`, `NVIDIA_TIMEOUT`), menambahkan `"nvidia"` ke ProviderEnum agar request schema menerima value tersebut di semua route, serta menyiapkan skeleton file `app/providers/nvidia.py`.
 
 ## 3. Tujuan Teknis
 - `NVIDIA_API_KEY`, `NVIDIA_BASE_URL`, `NVIDIA_TIMEOUT` bisa di-configure via `.env`
@@ -39,7 +39,7 @@ NVIDIA_TIMEOUT: int = 120
 Di `.env`:
 ```env
 # --- NVIDIA NIM ---
-NVIDIA_API_KEY=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
+NVIDIA_API_KEY=
 NVIDIA_BASE_URL=https://integrate.api.nvidia.com/v1
 NVIDIA_TIMEOUT=120
 ```
