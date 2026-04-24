@@ -1,8 +1,8 @@
-# 🧠 AI Generative Core
+# 🧠 Multi-Provider AI Core
 
 > **[🇬🇧 English](./README_EN.md)** | **[🇮🇩 Bahasa Indonesia](./README_ID.md)**
 
-**AI Generative Core** adalah sebuah backend API gateway yang menyatukan berbagai provider AI (**Ollama**, **Gemini**, **NVIDIA NIM**) ke dalam satu REST API seragam.
+**Multi-Provider AI Core** adalah sebuah backend API gateway yang menyatukan berbagai provider AI (**Ollama**, **Gemini**, **NVIDIA NIM**) ke dalam satu REST API seragam.
 
 Sistem ini didesain sebagai *production-ready AI engine* dengan kemampuan *smart routing*, *graceful auto-fallback*, *caching*, dan dukungan penuh untuk model bernalar (reasoning), streaming, serta multimodal.
 

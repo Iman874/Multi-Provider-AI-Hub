@@ -1,4 +1,4 @@
-# How to Run — AI Generative Core (v0.2.8)
+# How to Run — Multi-Provider AI Core (v0.2.8)
 
 Backend API gateway yang menyatukan 3 AI provider (Ollama, Gemini, NVIDIA NIM) dalam satu REST API.
 
@@ -97,7 +97,7 @@ curl http://localhost:8000/health
 
 Expected:
 ```json
-{"status": "ok", "version": "0.2.8", "app_name": "AI Generative Core"}
+{"status": "ok", "version": "0.2.8", "app_name": "Multi-Provider AI Core"}
 ```
 
 ---
